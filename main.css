@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: #f9ffff;
+    scroll-behavior: smooth;
+}
+#home h1{
+    font-size: 64px;
+}
+h3{
+    font-size: 32px;
+}
+p{
+    font-size: 16px;
+}
+body{
+    width: 100vw;
+    background-color: #172829;
+}
+
+.divisor{
+    display: none;
+}
+.line-left, .line-right{
+    display: none;
+}
+
+#about-me, #services, #my-works, #contact-me{
+    width: 80vw;
+    margin: auto;
+}
+
+/* HOME HOME HOME HOME HOME HOME */
+
+#home{
+    height: 100vh;
+}
+
+.logo{
+    padding: 2rem;
+    position: fixed;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 4rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-rl;
+}
+
+nav ul{
+    height: 70%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav li{
+    position: relative;
+    padding: 1rem;
+    display: inline;
+}
+
+nav li::after, nav li::before{
+    content: "";
+    width: 100%;
+    height: 2px;   
+    background-color: #f06b18;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform .8s;
+}
+
+nav li::before{
+    top: 0;
+    transform-origin: left;
+}
+nav li::after{
+    bottom: 0;
+    transform-origin: right;
+}
+
+nav li:hover::after, 
+nav li:hover::before{
+    transform: scaleX(1);
+}
+
+nav a{
+    color: #f9ffff;
+}
+
+.presentation{
+    width: 30%;
+    left: 15vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-contactMe{
+    position: relative;
+    background-color: transparent;
+    border-left: 2px solid #f06b18;
+    border-right: 2px solid #f06b18;
+    border-top: transparent;
+    border-bottom: transparent;
+    padding: .2rem 1rem;
+    font-size: 32px;
+    margin-top: 1rem;
+}
+.btn-contactMe::after, .btn-contactMe::before{
+    content: "";
+    width: 100%;
+    height: 2px;   
+    background-color: #f06b18;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform .8s;
+}
+
+.btn-contactMe::before{
+    top: 0;
+    transform-origin: left;
+}
+.btn-contactMe::after{
+    bottom: 0;
+    transform-origin: right;
+}
+
+.btn-contactMe:hover::after, 
+.btn-contactMe:hover::before{
+    transform: scaleX(1);
+}
+.btn-contactMe:hover{
+    transition: .8s;
+    background-color: #f06b18;
+}
+
+
+/* CARROUSEL CARROUSEL CARROUSEL CARROUSEL CARROUSEL */
+
+.carousel-container{
+    position: absolute;
+    right: 15vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30%;
+    height: 50%;
+    background-color: transparent;
+}
+
+.carousel-images{
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-images img{
+    width: 100%;
+}
+
+.carousel-up-btn,
+.carousel-down-btn{
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border: transparent;
+    background-color: transparent;
+    color: #f9ffff;
+}
+
+.carousel-up-btn:hover,
+.carousel-down-btn:hover{
+    background-color: #f06b18;
+    transition: .8s;
+}
+
+.carousel-up-btn{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-down-btn{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.w3-badge{
+    height: 13px;
+    width: 13px;
+    padding: 0;
+    position: absolute;
+    left: 0;
+}
+
+
+.vertical-text-myWorks{
+    position: absolute;
+    right: 12vw;
+    top: 50%;
+    transform: translateY(-98%);
+    writing-mode: vertical-lr;
+}
+
+@media only screen and (max-width: 1200px){
+
+    /*GENERALES GENERALES GENERALES GENERALES*/
+
+    .divisor{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 1rem;
+        margin: auto;
+        align-items: center;
+        font-size: 24px;
+    }
+
+    .line-right, .line-left{
+        display: initial;
+        height: 10px;
+        width: 70%;
+        background-color: #f9ffff;
+    }
+    .line-right{
+        margin-left: 1rem;
+    }
+    .line-left{
+        margin-right: 1rem;
+    }
+    .carrousel-container{
+        display: none;
+    }
+
+    /* HOME HOME HOME HOME HOME HOME HOME */
+
+    .navbar{
+        z-index: 99;
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        background-color: hsla(180, 100%, 98%, 0.8);
+        width: 100%;
+        height: 100vh;
+        transition: transform .5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: top .8s cubic-bezier(0.7, 0.1, 0.1, 0.7);
+        writing-mode: horizontal-tb;
+        font-size: 24px;
+    }
+    
+    .change{
+        top: 0;
+    }
+
+    nav li{
+        display: block;
+        padding: 2rem 0;
+    }
+    
+    nav li::after, nav li::before{
+        content: "";
+        width: 100%;
+        height: 2px;   
+        background-color: #f06b18;
+        position: absolute;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform .8s;
+    }
+    
+    nav li::before{
+        top: 0;
+        transform-origin: left;
+    }
+    nav li::after{
+        bottom: 0;
+        transform-origin: right;
+    }
+    
+    nav li:hover::after, 
+    nav li:hover::before{
+        transform: scaleX(1);
+    }
+    
+    nav a{
+        color: #172829;;
+    }
+    
+    .hamburguer-menu{
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-color: transparent;
+        border: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .line{
+        width: 100%;
+        height: .2rem;
+        background-color: #f9ffff;
+        transition: all .8s cubic-bezier(1, 0.1, 0.1, 0.7);
+    }
+    
+    .change .line-1 {
+        transform: rotateZ(-45deg) translate(-15px, 8px);
+        background-color: #f06b18;
+    }
+    .change .line-2{
+        opacity: 0;
+    }
+    .change .line-3 {
+        transform: rotateZ(45deg) translate(-15px, -8px);
+        background-color: #f06b18;
+    }
+
+    .presentation{
+        width: 60%;
+        margin: auto;
+        left: 0;
+        position: relative;
+    }
+
+}
