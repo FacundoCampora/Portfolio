@@ -26,6 +26,7 @@ body{
 
 .divisor{
     display: none;
+    padding-bottom: 4rem;
 }
 .line-left, .line-right{
     display: none;
@@ -34,9 +35,32 @@ body{
 #about-me, #services, #my-works, #contact-me{
     width: 80vw;
     margin: auto;
+    padding: 2rem 0;
 }
 
 /* HOME HOME HOME HOME HOME HOME */
+
+.parallax-container{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+    background-color: transparent;
+}
+
+.parallax-container ul{
+    width: 100%;
+    height: 100%;
+}
+
+.parallax-container ul img{
+    position: absolute;
+    top: 25vh;
+    left: 20vw;
+}
+
+.mixBlnd{
+	background-blend-mode: screen;
+}
 
 #home{
     height: 100vh;
@@ -158,7 +182,7 @@ nav a{
     right: 15vw;
     top: 50%;
     transform: translateY(-50%);
-    width: 30%;
+    width: 25%;
     height: 50%;
     background-color: transparent;
 }
@@ -178,7 +202,8 @@ nav a{
 
 .carousel-up-btn,
 .carousel-down-btn{
-    padding: .5rem 1rem;
+    font-size: 24px;
+    padding: .5rem;
     cursor: pointer;
     border: transparent;
     background-color: transparent;
@@ -196,6 +221,7 @@ nav a{
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    transform: rotate(90deg);
 }
 
 .carousel-down-btn{
@@ -203,16 +229,8 @@ nav a{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    transform: rotate(-90deg);
 }
-
-.w3-badge{
-    height: 13px;
-    width: 13px;
-    padding: 0;
-    position: absolute;
-    left: 0;
-}
-
 
 .vertical-text-myWorks{
     position: absolute;
@@ -226,6 +244,15 @@ nav a{
 
     /*GENERALES GENERALES GENERALES GENERALES*/
 
+    h1{
+        font-size: 34px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 24px;
+    }
     .divisor{
         display: flex;
         justify-content: space-between;
@@ -242,15 +269,13 @@ nav a{
         width: 70%;
         background-color: #f9ffff;
     }
-    .line-right{
-        margin-left: 1rem;
-    }
-    .line-left{
-        margin-right: 1rem;
-    }
-    .carrousel-container{
+    .carousel-container{
         display: none;
     }
+    .vertical-text-myWorks{
+        display: none;
+    }
+
 
     /* HOME HOME HOME HOME HOME HOME HOME */
 
@@ -343,10 +368,13 @@ nav a{
     }
 
     .presentation{
-        width: 60%;
-        margin: auto;
-        left: 0;
-        position: relative;
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .presentation a{
+        font-size: 24px;
     }
 
 }
