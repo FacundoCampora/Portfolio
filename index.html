@@ -27,9 +27,18 @@
                 <div class="line line-3"></div>
             </div>
         </nav>
+
+        <div class="parallax-container">
+            <ul id="scene">
+                <li class="layer" data-depth=".1"><img src="imgs/bg.png"></li>
+                <li class="layer" data-depth="1"><img src="imgs/bg2.png"></li>
+                <li class="layer" data-depth="-1"><img src="imgs/bg3.png"></li>
+            </ul>
+        </div>
+
         <div class="presentation">
             <h1>Facundo Campora</h1>
-            <h3>Freelance Web Developer</h3>
+            <h2>Freelance Web Developer</h2>
             <button class="btn-contactMe"><a href="#contact-me">Contact Me</a></button>
         </div>
     </div>
@@ -40,8 +49,8 @@
             <img class="mySlides" src="imgs/3.jpg">
         </div>
             
-        <button class="carousel-up-btn" onclick="plusDivs(-1)">up</button>
-        <button class="carousel-down-btn" onclick="plusDivs(+1)">dw</button>
+        <button class="carousel-up-btn" onclick="plusDivs(-1)">&lt;</button>
+        <button class="carousel-down-btn" onclick="plusDivs(+1)">&lt;</button>
     </div>
     <h3 class="vertical-text-myWorks">My Works</h3>
     <div id="about-me">
@@ -71,9 +80,9 @@
         <div class="divisor">
             <div class="line-left"></div><h1 class="title">My Works</h1>
         </div>
-        <a href="#"><img src="#" alt=""></a>
-        <a href="#"><img src="#" alt=""></a>
-        <a href="#"><img src="#" alt=""></a>
+        <img src="imgs/1.jpg">
+        <img src="imgs/2.jpg">
+        <img src="imgs/3.jpg">
     </div>
     <div id="contact-me">
         <div class="divisor">
@@ -88,5 +97,9 @@
         </div>
     </div>
     <script src='main.js'></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+    </script>
 </body>
 </html>
