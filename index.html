@@ -6,6 +6,7 @@
     <title>Inicio</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://kit.fontawesome.com/f26b95b976.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="home">
@@ -17,8 +18,9 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about-me">About Me</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#my-works">My Works</a></li>
+                <li class="my-works-li"><a href="#my-works">My Works</a></li>
                 <li><a href="#contact-me">Contact Me</a></li>
+                <a href="https://github.com/FacundoCampora" target="_blank" class="fab fa-github"></a>
             </ul>
 
             <div class="hamburguer-menu">
@@ -27,7 +29,7 @@
                 <div class="line line-3"></div>
             </div>
         </nav>
-
+        <a href="https://github.com/FacundoCampora" target="_blank" class="fab fa-github"></a>
         <div class="parallax-container">
             <ul id="scene">
                 <li class="layer" data-depth=".1"><img src="imgs/bg.png"></li>
@@ -38,7 +40,7 @@
 
         <div class="presentation">
             <h1>Facundo Campora</h1>
-            <h2>Freelance Web Developer</h2>
+            <h2>El + picante del condado</h2>
             <button class="btn-contactMe"><a href="#contact-me">Contact Me</a></button>
         </div>
     </div>
@@ -47,17 +49,19 @@
             <img class="mySlides" src="imgs/1.jpg">
             <img class="mySlides" src="imgs/2.jpg">
             <img class="mySlides" src="imgs/3.jpg">
+
+            <h3 class="vertical-text-myWorks">My Works</h3>
         </div>
             
         <button class="carousel-up-btn" onclick="plusDivs(-1)">&lt;</button>
         <button class="carousel-down-btn" onclick="plusDivs(+1)">&lt;</button>
     </div>
-    <h3 class="vertical-text-myWorks">My Works</h3>
+    
     <div id="about-me">
         <div class="divisor">
             <div class="line-left"></div><h1 class="title">About Me</h1>
         </div>
-        <div>
+        <div class="section-container">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non optio architecto nostrum, iusto molestiae odio nesciunt. 
             Quidem tempora asperiores nulla velit neque esse, expedita ipsa vero voluptatum earum tenetur dignissimos minima sit consequatur 
             dolorum, non ipsum, aliquid alias at quia!</p>
@@ -67,32 +71,40 @@
         <div class="divisor">
             <h1 class="title">Services</h1><div class="line-right"></div>
         </div>
-        <div>
-            <h3>Front End Development</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius delectus, labore dolor perferendis quae aut.</p>
-        </div>
-        <div>
-            <h3>Front End Development</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius delectus, labore dolor perferendis quae aut.</p>
+        <div class="section-container">
+            <div class="content-services">
+                <h3>Front End Development</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius delectus, labore dolor perferendis quae aut.</p>
+            </div>
+            <div>
+                <h3>Front End Development</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius delectus, labore dolor perferendis quae aut.</p>
+            </div>
         </div>
     </div>
     <div id="my-works">
         <div class="divisor">
             <div class="line-left"></div><h1 class="title">My Works</h1>
         </div>
-        <img src="imgs/1.jpg">
-        <img src="imgs/2.jpg">
-        <img src="imgs/3.jpg">
+        <div class="img-container">
+            <img src="imgs/1.jpg">
+            <img src="imgs/2.jpg">
+            <img src="imgs/3.jpg">
+        </div>
     </div>
     <div id="contact-me">
-        <div class="divisor">
+        <div class="divisor" id="cm-divisor-right">
             <h1 class="title">Contact Me</h1><div class="line-right"></div>
+        </div>
+        <div class="divisor-left" id="cm-divisor-left">
+            <div class="line-left"></div><h1 class="title">Contact Me</h1>
         </div>
         <div class="contactMe-form">
             <p>Nombre: </p><input type="text">
             <p>eMail: </p><input type="text">
             <p>Subject:</p><input type="text">
-            <input type="submit" value="Send">
+
+            <button type="submit" value="Send">Submit</button>
 
         </div>
     </div>

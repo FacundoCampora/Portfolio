@@ -20,16 +20,41 @@ p{
     font-size: 16px;
 }
 body{
-    width: 100vw;
+    width: 98vw;
     background-color: #172829;
 }
 
 .divisor{
-    display: none;
-    padding-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem;
+    margin: auto;
+    align-items: center;
+    font-size: 24px;
 }
-.line-left, .line-right{
+#cm-divisor-right{
     display: none;
+}
+#cm-divisor-left{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem;
+    margin: auto;
+    align-items: center;
+    font-size: 24px;
+}
+#about-me, #services, #my-works, #contact-me{
+    width: 80vw;
+    margin: auto;
+    padding: 2rem 0;
+}
+.line-right, .line-left{
+    display: initial;
+    height: 10px;
+    width: 75%;
+    background-color: #f9ffff;
 }
 
 #about-me, #services, #my-works, #contact-me{
@@ -38,13 +63,25 @@ body{
     padding: 2rem 0;
 }
 
+#my-works{
+    display: none;
+}
+.my-works-li{
+    display: none;
+}
+
+.section-container{
+    width: 70%;
+}
+
 /* HOME HOME HOME HOME HOME HOME */
 
 .parallax-container{
-	width: 100%;
+    position: absolute;
+	width: 90%;
 	height: 100vh;
 	overflow: hidden;
-    background-color: transparent;
+    right: 0;
 }
 
 .parallax-container ul{
@@ -174,16 +211,24 @@ nav a{
     background-color: #f06b18;
 }
 
+.fa-github{
+    cursor: pointer;
+    font-size: 32px;
+    position: fixed;
+    padding: 2.2rem;
+    bottom: 0;
+    left: 0;
+}
 
 /* CARROUSEL CARROUSEL CARROUSEL CARROUSEL CARROUSEL */
 
 .carousel-container{
     position: absolute;
-    right: 15vw;
+    right: 11vw;
     top: 50%;
     transform: translateY(-50%);
-    width: 25%;
-    height: 50%;
+    width: 29%;
+    height: 60%;
     background-color: transparent;
 }
 
@@ -197,47 +242,87 @@ nav a{
 }
 
 .carousel-images img{
-    width: 100%;
+    width: 90%;
+    border-radius: 5%;
 }
 
 .carousel-up-btn,
 .carousel-down-btn{
-    font-size: 24px;
+    font-size: 30px;
     padding: .5rem;
     cursor: pointer;
     border: transparent;
     background-color: transparent;
     color: #f9ffff;
+    border-radius: 5%;
 }
 
 .carousel-up-btn:hover,
 .carousel-down-btn:hover{
-    background-color: #f06b18;
     transition: .8s;
 }
 
 .carousel-up-btn{
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 42%;
     transform: rotate(90deg);
 }
 
 .carousel-down-btn{
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 42%;
     transform: rotate(-90deg);
 }
 
 .vertical-text-myWorks{
     position: absolute;
-    right: 12vw;
-    top: 50%;
-    transform: translateY(-98%);
+    right: 0vw;
+    top: 0;
     writing-mode: vertical-lr;
+}
+.navbar .fa-github{
+    display: none;
+}
+
+ 
+/* ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME */
+
+#about-me 
+
+/* SERVICES SERVICES SERVICES SERVICES SERVICES */
+
+#services .section-container
+
+.content-services
+
+/* CONTACT ME CONTACT ME CONTACT ME CONTACT ME */
+    
+    .contactMe-form button{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: .2rem 0;
+        margin-top: 1.5rem;
+        cursor: pointer;
+   }
+   .contactMe-form input{
+       width: 100%;
+   }
+   .contactMe-form input, .contactMe-form button{
+       background-color: transparent;
+       border: 1px solid #f9ffff
+   }
+
+/* MY WORKS MY WORKS MY WORKS MY WORKS MY WORKS */
+
+.img-container{
+    position: relative;
+    width: 100%;
+}
+.img-container img{
+    width: 100%;
 }
 
 @media only screen and (max-width: 1200px){
@@ -253,20 +338,39 @@ nav a{
     h3{
         font-size: 24px;
     }
+    header h3{
+        font-size: 34px;
+    }
     .divisor{
         display: flex;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         margin: 1rem;
         margin: auto;
         align-items: center;
         font-size: 24px;
     }
-
+    #cm-divisor-left{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 1rem;
+        margin: auto;
+        align-items: center;
+        font-size: 24px;
+    }
+    #cm-divisor-right{
+        display: none;
+    }
+    #about-me, #services, #my-works, #contact-me{
+        width: 90vw;
+        margin: auto;
+        padding: 2rem 0;
+    }
     .line-right, .line-left{
         display: initial;
         height: 10px;
-        width: 70%;
+        width: 45%;
         background-color: #f9ffff;
     }
     .carousel-container{
@@ -276,8 +380,33 @@ nav a{
         display: none;
     }
 
-
     /* HOME HOME HOME HOME HOME HOME HOME */
+
+    .navbar a.fa-github{
+        display:inline;
+        position: relative;
+        top:2rem;
+
+    }
+    a.fa-github{
+        display: none;
+    }
+    .parallax-container{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        right: 0;
+    }
+    .parallax-container ul{
+        width: 100%;
+        height: 100%;
+    }  
+    .parallax-container ul img{
+        position: absolute;
+        top: 35vh;
+        left: 5vw;
+    }
 
     .navbar{
         z-index: 99;
@@ -377,4 +506,23 @@ nav a{
         font-size: 24px;
     }
 
+    .btn-contactMe{
+        position: relative;
+        background-color: #f06b18;
+        border: transparent;
+        padding: .2rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .btn-contactMe::after, .btn-contactMe::before{
+        display: none;
+    }
+    
+    .btn-contactMe:hover{
+        display: none
+    }
+    
+    i{
+        display: none;
+    }
 }
