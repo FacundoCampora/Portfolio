@@ -23,7 +23,9 @@ body{
     width: 98vw;
     background-color: #172829;
 }
-
+#linkMail{
+    opacity: 0;
+}
 .divisor{
     display: flex;
     justify-content: space-between;
